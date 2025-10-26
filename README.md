@@ -4,7 +4,7 @@ A modern, responsive gaming website built with React and Vite featuring smooth a
 
 ## 🚀 Live Demo
 
-[**🌐 Visit Website**](https://nexus-arena.vercel.app): https://nexus-arena.vercel.app
+[**🌐 Visit Website**](https://nexusarena.vercel.app): https://nexusarena.vercel.app
 
 ## ✨ Features
 
@@ -45,7 +45,7 @@ A modern, responsive gaming website built with React and Vite featuring smooth a
 
 ```bash
 # Clone the repository
-git clone https://github.com/shubhamx599/nexus-arena.git
+git clone https://github.com/shubhamx599/nexusarena.git
 
 # Navigate to project directory
 cd nexus-arena
@@ -55,57 +55,6 @@ npm install
 
 # Start development server
 npm run dev
-```
-
-## 📁 Project Structure
-
-```
-nexus-arena
-├─ eslint.config.js
-├─ index.html
-├─ package-lock.json
-├─ package.json
-├─ public
-│  └─ vite.svg
-├─ README.md
-├─ src
-│  ├─ App.jsx
-│  ├─ assets
-│  │  └─ react.svg
-│  ├─ components
-│  │  ├─ layout
-│  │  │  ├─ Footer.jsx
-│  │  │  └─ Navbar.jsx
-│  │  ├─ sections
-│  │  │  ├─ Contact.jsx
-│  │  │  ├─ Features.jsx
-│  │  │  ├─ Games.jsx
-│  │  │  ├─ Hero.jsx
-│  │  │  ├─ Streamers.jsx
-│  │  │  └─ Tournaments.jsx
-│  │  └─ ui
-│  │     ├─ AnimatedButton.jsx
-│  │     ├─ CustomCursor.jsx
-│  │     ├─ ScrollProgress.jsx
-│  │     └─ SocialMediaIcons.jsx
-│  ├─ constants
-│  │  └─ footerLinks.js
-│  ├─ data
-│  │  ├─ features.data.js
-│  │  ├─ games.data.js
-│  │  ├─ streamers.data.js
-│  │  └─ tournaments.data.js
-│  ├─ hooks
-│  │  ├─ useMediaQuery.js
-│  │  ├─ useMousePosition.js
-│  │  ├─ useNewsletter.js
-│  │  └─ useScrollDirection.js
-│  ├─ index.css
-│  ├─ main.jsx
-│  └─ utils
-│     └─ animations.js
-└─ vite.config.js
-
 ```
 
 ## 🌐 Deployment
