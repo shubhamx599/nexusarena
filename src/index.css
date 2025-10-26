@@ -1,0 +1,153 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+/* Custom Colors - Gaming Theme */
+@theme {
+  --color-primary: #00ff88;
+  --color-secondary: #00a2ff;
+  --color-accent: #ff0080;
+  --color-dark: #0a0a14;
+  --color-darker: #050509;
+  --color-light: #f0f0f0;
+  --scrollbar-width: none;
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: transparent;
+
+  /* Custom Font Families */
+  --font-montserrat: "Montserrat", "system-ui", "sans-serif";
+  --font-orbitron: "Orbitron", "system-ui", "sans-serif";
+
+  /* Custom Gradients */
+  --gradient-primary: linear-gradient(135deg, #00ff88, #00a2ff);
+  --gradient-dark: linear-gradient(135deg, #050509, #0a0a14);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-50px) rotate(180deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  }
+  to {
+    text-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+  }
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--gradient-dark);
+    color: var(--color-light);
+    font-family: var(--font-montserrat);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-orbitron);
+  }
+}
+
+/* Components */
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-full font-bold transition-all duration-300;
+    font-family: var(--font-montserrat);
+  }
+
+  .btn-primary {
+    background: var(--gradient-primary);
+    color: var(--color-darker);
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.25);
+  }
+
+  .btn-secondary {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-darker);
+  }
+
+  .container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .animate-float {
+    animation: float 15s infinite linear;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+}
+
+/* Scrollbar Hide */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
