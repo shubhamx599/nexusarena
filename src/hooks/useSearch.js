@@ -1,3 +1,4 @@
+// src/hooks/useSearch.js
 import { useState, useEffect } from "react";
 import { POPULAR_SEARCHES } from "../constants/search";
 

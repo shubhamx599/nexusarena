@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+// src/hooks/useScrollDetection.js
+import { useState, useEffect } from "react";
 
 export const useScrollDetection = (sections, scrollThreshold = 50) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('#home');
+  const [activeLink, setActiveLink] = useState("#home");
 
   useEffect(() => {
     let ticking = false;
@@ -14,13 +15,16 @@ export const useScrollDetection = (sections, scrollThreshold = 50) => {
 
           // Active link detection
           const scrollPosition = window.scrollY + 100;
-          let current = '#home';
+          let current = "#home";
 
           sections.forEach((section) => {
             const element = document.querySelector(section);
             if (element) {
               const { offsetTop, offsetHeight } = element;
-              if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+              if (
+                scrollPosition >= offsetTop &&
+                scrollPosition < offsetTop + offsetHeight
+              ) {
                 current = section;
               }
             }
@@ -33,10 +37,10 @@ export const useScrollDetection = (sections, scrollThreshold = 50) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial call
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [sections, scrollThreshold]);
 
   return { isScrolled, activeLink, setActiveLink };

@@ -1,4 +1,4 @@
-// src/hooks/useMousePosition.js - YEH BILKUL SAHI HAI
+// src/hooks/useMousePosition.js
 import { useState, useEffect } from 'react';
 
 const useMousePosition = () => {

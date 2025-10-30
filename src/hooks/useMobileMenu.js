@@ -1,3 +1,4 @@
+// src/hooks/useMobileMenu.js
 import { useState, useEffect } from 'react';
 
 export const useMobileMenu = () => {
