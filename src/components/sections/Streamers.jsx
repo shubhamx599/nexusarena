@@ -89,7 +89,7 @@ const Streamers = () => {
 
               {/* Action Buttons */}
               <div className="flex gap-2">
-                <button className="flex-1 bg-gradient-to-r from-primary to-secondary text-darker py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform">
+                <button className="flex-1 bg-linear-to-r from-primary to-secondary text-darker py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform">
                   {streamer.isLive ? 'Watch Live' : 'Follow'}
                 </button>
                 <button className="px-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors text-sm">
@@ -101,7 +101,7 @@ const Streamers = () => {
         </div>
 
         {/* Become a Streamer CTA */}
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20 text-center">
+        <div className="bg-linear-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20 text-center">
           <h3 className="text-2xl md:text-3xl font-bold font-orbitron text-gradient mb-4">
             Ready to Start Streaming?
           </h3>

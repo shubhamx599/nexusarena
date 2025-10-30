@@ -91,7 +91,7 @@ const Tournaments = () => {
 
               {/* Action Buttons */}
               <div className="flex gap-3">
-                <button className="flex-1 bg-gradient-to-r from-primary to-secondary text-darker py-3 rounded-lg font-bold hover:scale-105 transition-transform">
+                <button className="flex-1 bg-linear-to-r from-primary to-secondary text-darker py-3 rounded-lg font-bold hover:scale-105 transition-transform">
                   Register Now
                 </button>
                 <button className="px-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors">

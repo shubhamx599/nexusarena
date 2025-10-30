@@ -38,7 +38,7 @@ const Games = () => {
                   
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-dark/90 via-transparent to-transparent"></div>
                 
                 {/* Players Badge */}
                 <div className="absolute top-3 right-3 bg-darker/90 backdrop-blur-sm rounded-full px-3 py-1">
@@ -75,7 +75,7 @@ const Games = () => {
                   <div className="text-xs text-light/60 font-montserrat">
                     {game.tournaments} tournaments
                   </div>
-                  <button className="text-xs bg-gradient-to-r from-primary to-secondary text-darker px-3 py-1 rounded-full font-bold hover:scale-105 transition-transform">
+                  <button className="text-xs bg-linear-to-r from-primary to-secondary text-darker px-3 py-1 rounded-full font-bold hover:scale-105 transition-transform">
                     PLAY
                   </button>
                 </div>

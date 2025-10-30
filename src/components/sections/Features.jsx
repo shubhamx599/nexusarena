@@ -45,7 +45,7 @@ const Features = () => {
               </p>
               
               {/* Hover Effect Line */}
-              <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-500 mt-4"></div>
+              <div className="w-0 group-hover:w-full h-0.5 bg-linear-to-r from-primary to-secondary transition-all duration-500 mt-4"></div>
             </div>
           ))}
         </div>
