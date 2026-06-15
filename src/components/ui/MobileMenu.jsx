@@ -25,7 +25,7 @@ const MobileMenu = ({
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-            className="absolute top-0 right-0 h-full w-80 bg-darker/95 backdrop-blur-2xl border-l border-primary/20 shadow-2xl shadow-primary/20 flex flex-col"
+            className="absolute top-0 right-0 h-screen max-h-screen w-80 bg-darker/95 backdrop-blur-2xl border-l border-primary/20 shadow-2xl shadow-primary/20 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile Menu Header */}
