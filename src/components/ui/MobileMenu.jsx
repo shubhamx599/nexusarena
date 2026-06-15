@@ -25,7 +25,7 @@ const MobileMenu = ({
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-            className="absolute top-0 right-0 h-screen max-h-screen w-80 bg-darker/95 backdrop-blur-2xl border-l border-primary/20 shadow-2xl shadow-primary/20 flex flex-col"
+            className="absolute top-0 right-0 h-dvh max-h-dvh w-80 bg-darker/95 backdrop-blur-2xl border-l border-primary/20 shadow-2xl shadow-primary/20 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile Menu Header */}
@@ -43,7 +43,7 @@ const MobileMenu = ({
             </div>
 
             {/* Mobile Navigation Links */}
-            <div className="p-6 space-y-2 flex-1 overflow-y-auto">
+            <div className="p-6 space-y-2 flex-1 overflow-y-auto min-h-0" style={{ WebkitOverflowScrolling: 'touch' }}>
               <NavLinks 
                 links={navLinks}
                 activeLink={activeLink}
