@@ -3,7 +3,7 @@ import { gamesData } from '../../data/games.data'
 
 const Games = () => {
   return (
-    <section className="py-20 bg-dark relative overflow-hidden" id="games">
+    <section className="py-12 sm:py-20 bg-dark relative overflow-hidden" id="games">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
@@ -47,7 +47,7 @@ const Games = () => {
               </div>
 
               {/* Game Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {/* Title */}
                 <h3 className="text-xl font-bold font-orbitron text-white mb-2 group-hover:text-primary transition-colors">
                   {game.title}

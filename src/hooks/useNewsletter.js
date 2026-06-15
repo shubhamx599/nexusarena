@@ -35,9 +35,14 @@ export const useNewsletter = (onSubscribe) => {
     setStatus('');
   }, []);
 
+  const updateEmail = useCallback((value) => {
+    setEmail(value);
+    setStatus('');
+  }, []);
+
   return {
     email,
-    setEmail,
+    setEmail: updateEmail,
     status,
     isLoading,
     subscribe,

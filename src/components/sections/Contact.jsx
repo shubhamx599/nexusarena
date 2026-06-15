@@ -31,14 +31,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-darker relative overflow-hidden" id="contact">
+    <section className="py-12 sm:py-20 bg-darker relative overflow-hidden" id="contact">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-28 h-28 bg-secondary/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-gradient font-orbitron mb-6">
@@ -72,7 +72,7 @@ const Contact = () => {
                     support@nexusarena.com
                   </p>
                   <p className="text-light/60 text-sm font-montserrat">
-                    We'll reply within 24 hours
+                    We&apos;ll reply within 24 hours
                   </p>
                 </div>
               </div>

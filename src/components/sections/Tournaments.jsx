@@ -21,7 +21,7 @@ const Tournaments = () => {
   }
 
   return (
-    <section className="py-20 bg-darker relative overflow-hidden" id="tournaments">
+    <section className="py-12 sm:py-20 bg-darker relative overflow-hidden" id="tournaments">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-24 h-24 bg-primary/5 rounded-full blur-3xl"></div>
@@ -40,11 +40,11 @@ const Tournaments = () => {
         </div>
 
         {/* Tournaments Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
           {tournamentsData.map((tournament) => (
             <div 
               key={tournament.id}
-              className="bg-glass rounded-2xl p-6 border border-white/5 hover:border-primary/30 transition-all duration-500 group hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/10"
+              className="bg-glass rounded-2xl p-4 sm:p-6 border border-white/5 hover:border-primary/30 transition-all duration-500 group hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/10"
             >
               {/* Tournament Header */}
               <div className="flex justify-between items-start mb-4">

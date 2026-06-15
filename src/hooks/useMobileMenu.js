@@ -17,6 +17,19 @@ export const useMobileMenu = () => {
     };
   }, [isMobileMenuOpen]);
 
+  // Close menu when screen resizes to desktop width
+  useEffect(() => {
+    const media = window.matchMedia('(min-width: 1024px)');
+    const handleResize = (e) => {
+      if (e.matches) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    media.addEventListener('change', handleResize);
+    return () => media.removeEventListener('change', handleResize);
+  }, []);
+
   const toggleMobileMenu = () => setIsMobileMenuOpen(prev => !prev);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 

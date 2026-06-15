@@ -35,7 +35,7 @@ const Footer = memo(() => {
         Skip to main content
       </a>
 
-      <div className="container py-12 px-4 sm:px-6 lg:px-8">
+      <div className="container py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 max-w-7xl mx-auto">
           

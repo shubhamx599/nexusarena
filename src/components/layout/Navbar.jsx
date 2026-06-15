@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 // Hooks
 import { useScrollDetection } from "../../hooks/useScrollDetection";
@@ -7,7 +8,7 @@ import { useSearch } from "../../hooks/useSearch";
 import { useMobileMenu } from "../../hooks/useMobileMenu";
 
 // Constants
-import { NAV_LINKS, SECTIONS } from "../../constants/navigation";
+import { NAV_LINKS } from "../../constants/navigation";
 
 // Components
 import SearchModal from "../ui/SearchModal";
@@ -17,8 +18,11 @@ import SearchButton from "../ui/SearchButton";
 import MenuToggleButton from "../ui/MenuToggleButton";
 
 const Navbar = () => {
+  const location = useLocation();
+  const activeLink = location.pathname;
+
   // Custom hooks
-  const { isScrolled, activeLink, setActiveLink } = useScrollDetection(SECTIONS);
+  const isScrolled = useScrollDetection();
   const { 
     isSearchOpen, 
     setIsSearchOpen, 
@@ -35,15 +39,9 @@ const Navbar = () => {
   } = useMobileMenu();
 
   // Handlers
-  const handleNavClick = useCallback((e, targetId) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-      setActiveLink(targetId);
-    }
-  }, [setIsMobileMenuOpen, setActiveLink]);
+  const handleNavClick = useCallback(() => {
+    setIsMobileMenuOpen(false);
+  }, [setIsMobileMenuOpen]);
 
   return (
     <>
@@ -82,7 +80,7 @@ const Navbar = () => {
             />
 
             {/* Desktop Right Section */}
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               {/* Search Button */}
               <SearchButton onClick={() => setIsSearchOpen(true)} />
 
@@ -95,7 +93,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Section */}
-            <div className="flex items-center gap-2 md:hidden">
+            <div className="flex items-center gap-2 lg:hidden">
               {/* Mobile Search Button */}
               <SearchButton mobile onClick={() => setIsSearchOpen(true)} />
 

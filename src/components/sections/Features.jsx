@@ -3,7 +3,7 @@ import { featuresData } from '../../data/features.data'
 
 const Features = () => {
   return (
-    <section className="py-20 bg-darker relative overflow-hidden" id="features">
+    <section className="py-12 sm:py-20 bg-darker relative overflow-hidden" id="features">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-20 h-20 bg-primary/5 rounded-full blur-2xl"></div>
@@ -27,7 +27,7 @@ const Features = () => {
           {featuresData.map((feature) => (
             <div 
               key={feature.id}
-              className="bg-glass rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-500 group cursor-pointer border border-white/5 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10"
+              className="bg-glass rounded-xl p-5 sm:p-6 hover:transform hover:scale-105 transition-all duration-500 group cursor-pointer border border-white/5 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10"
             >
               {/* Icon */}
               <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -52,7 +52,7 @@ const Features = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-glass rounded-2xl p-8 max-w-2xl mx-auto border border-primary/20">
+          <div className="bg-glass rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto border border-primary/20">
             <h3 className="text-2xl font-bold font-orbitron mb-4 text-gradient">
               Ready to Dominate?
             </h3>

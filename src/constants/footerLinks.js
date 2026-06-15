@@ -1,9 +1,10 @@
 export const QUICK_LINKS = [
-  { name: 'Home', id: '#home' },
-  { name: 'Features', id: '#features' },
-  { name: 'Games', id: '#games' },
-  { name: 'Tournaments', id: '#tournaments' },
-  { name: 'Streamers', id: '#streamers' }
+  { name: 'Home', url: '/' },
+  { name: 'Features', url: '/features' },
+  { name: 'Games', url: '/games' },
+  { name: 'Tournaments', url: '/tournaments' },
+  { name: 'Streamers', url: '/streamers' },
+  { name: 'Contact', url: '/contact' }
 ];
 
 export const SUPPORT_LINKS = [

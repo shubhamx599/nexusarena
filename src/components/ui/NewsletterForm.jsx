@@ -14,12 +14,12 @@ const NewsletterForm = ({
   }, [email, onSubmit]);
 
   return (
-    <div className={centerOnMobile ? 'text-center md:text-left' : ''}>
-      <p className="text-light/80 font-montserrat mb-4 max-w-md md:max-w-none mx-auto md:mx-0">
+    <div className={centerOnMobile ? 'text-center sm:text-left' : ''}>
+      <p className="text-light/80 font-montserrat mb-4 max-w-md sm:max-w-none mx-auto sm:mx-0">
         Subscribe for tournament updates and gaming news.
       </p>
       
-      <form onSubmit={handleSubmit} className="space-y-3 max-w-md md:max-w-none mx-auto md:mx-0">
+      <form onSubmit={handleSubmit} className="space-y-3 max-w-md sm:max-w-none mx-auto sm:mx-0">
         <div className="flex gap-2 flex-col sm:flex-row">
           <input 
             type="email" 

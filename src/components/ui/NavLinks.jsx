@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+const MotionLink = motion(Link);
 
 const NavLinks = ({ links, activeLink, onNavClick, mobile = false }) => {
   if (mobile) {
     return links.map((link, index) => {
       const IconComponent = link.icon;
       return (
-        <motion.a
+        <MotionLink
           key={link.href}
-          href={link.href}
-          onClick={(e) => onNavClick(e, link.href)}
+          to={link.href}
+          onClick={onNavClick}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.1 }}
@@ -28,19 +31,19 @@ const NavLinks = ({ links, activeLink, onNavClick, mobile = false }) => {
 
           {/* Hover Glow */}
           <div className="absolute inset-0 bg-linear-to-r from-primary/0 via-primary/5 to-primary/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </motion.a>
+        </MotionLink>
       );
     });
   }
 
   // Desktop version
   return (
-    <div className="hidden md:flex items-center gap-1 font-montserrat bg-black/20 rounded-2xl p-1 border border-white/10">
+    <div className="hidden lg:flex items-center gap-1 font-montserrat bg-black/20 rounded-2xl p-1 border border-white/10">
       {links.map((link) => (
-        <a
+        <Link
           key={link.href}
-          href={link.href}
-          onClick={(e) => onNavClick(e, link.href)}
+          to={link.href}
+          onClick={onNavClick}
           className={`relative px-6 py-3 rounded-xl transition-all duration-300 group gaming-nav-link ${
             activeLink === link.href
               ? "text-primary bg-primary/10"
@@ -56,7 +59,7 @@ const NavLinks = ({ links, activeLink, onNavClick, mobile = false }) => {
           
           {/* Hover Glow Effect */}
           <div className="absolute inset-0 bg-linear-to-r from-primary/0 via-primary/10 to-primary/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </a>
+        </Link>
       ))}
     </div>
   );

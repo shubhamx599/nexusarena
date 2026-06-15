@@ -92,15 +92,15 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16 w-full max-w-md mx-auto px-4"
           variants={itemVariants}
         >
-          <AnimatedButton variant="primary">Join Tournament</AnimatedButton>
-          <AnimatedButton variant="secondary">Learn More</AnimatedButton>
+          <AnimatedButton variant="primary" className="w-full sm:w-auto text-center">Join Tournament</AnimatedButton>
+          <AnimatedButton variant="secondary" className="w-full sm:w-auto text-center">Learn More</AnimatedButton>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto bg-glass rounded-2xl p-8 font-montserrat"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto bg-glass rounded-2xl p-6 sm:p-8 font-montserrat"
           variants={itemVariants}
         >
           <div className="text-center">

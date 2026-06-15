@@ -17,7 +17,7 @@ const MobileMenu = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/90 backdrop-blur-xl z-40 md:hidden"
+          className="fixed inset-0 bg-black/90 backdrop-blur-xl z-40 lg:hidden"
           onClick={onClose}
         >
           <motion.div
@@ -25,11 +25,11 @@ const MobileMenu = ({
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-            className="absolute top-0 right-0 h-full w-80 bg-darker/95 backdrop-blur-2xl border-l border-primary/20 shadow-2xl shadow-primary/20"
+            className="absolute top-0 right-0 h-full w-80 bg-darker/95 backdrop-blur-2xl border-l border-primary/20 shadow-2xl shadow-primary/20 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile Menu Header */}
-            <div className="p-6 border-b border-primary/10 bg-linear-to-r from-primary/5 to-transparent">
+            <div className="p-6 border-b border-primary/10 bg-linear-to-r from-primary/5 to-transparent shrink-0">
               <div className="flex justify-between items-center">
                 <h3 className="text-xl font-bold text-gradient font-orbitron">MENU</h3>
                 <button
@@ -43,7 +43,7 @@ const MobileMenu = ({
             </div>
 
             {/* Mobile Navigation Links */}
-            <div className="p-6 space-y-2">
+            <div className="p-6 space-y-2 flex-1 overflow-y-auto">
               <NavLinks 
                 links={navLinks}
                 activeLink={activeLink}

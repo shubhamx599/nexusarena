@@ -18,10 +18,11 @@ export const useSearch = () => {
     }
   }, [searchQuery]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      console.log("Searching for:", searchQuery);
+  const handleSearch = (e, overrideQuery) => {
+    if (e) e.preventDefault();
+    const query = overrideQuery !== undefined ? overrideQuery : searchQuery;
+    if (query.trim()) {
+      console.log("Searching for:", query);
       setIsSearchOpen(false);
       setSearchQuery("");
       setSearchSuggestions([]);
@@ -29,11 +30,7 @@ export const useSearch = () => {
   };
 
   const handleSuggestionClick = (suggestion) => {
-    setSearchQuery(suggestion);
-    setTimeout(() => {
-      const e = new Event("submit");
-      handleSearch(e);
-    }, 100);
+    handleSearch(null, suggestion);
   };
 
   return {

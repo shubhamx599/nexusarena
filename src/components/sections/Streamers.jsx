@@ -3,7 +3,7 @@ import { streamersData } from '../../data/streamers.data'
 
 const Streamers = () => {
   return (
-    <section className="py-20 bg-dark relative overflow-hidden" id="streamers">
+    <section className="py-12 sm:py-20 bg-dark relative overflow-hidden" id="streamers">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-1/4 w-28 h-28 bg-primary/5 rounded-full blur-3xl"></div>
@@ -26,7 +26,7 @@ const Streamers = () => {
           {streamersData.map((streamer) => (
             <div 
               key={streamer.id}
-              className="bg-glass rounded-2xl p-6 border border-white/5 hover:border-primary/30 transition-all duration-500 group hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/10"
+              className="bg-glass rounded-2xl p-4 sm:p-6 border border-white/5 hover:border-primary/30 transition-all duration-500 group hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/10"
             >
               {/* Streamer Header */}
               <div className="flex items-center gap-4 mb-4">
@@ -72,7 +72,7 @@ const Streamers = () => {
               )}
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6">
                 <div className="text-center">
                   <div className="text-lg font-bold text-primary font-orbitron">{streamer.followers}</div>
                   <div className="text-xs text-light/60 font-montserrat">Followers</div>

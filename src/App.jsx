@@ -1,30 +1,43 @@
 // src/App.jsx
 import './index.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+// Layout
 import Navbar from './components/layout/Navbar'
-import Hero from './components/sections/Hero'
+import Footer from './components/layout/Footer'
+
+// Pages / Sections
+import Home from './pages/Home'
 import Features from './components/sections/Features'
 import Games from './components/sections/Games'
 import Tournaments from './components/sections/Tournaments'
 import Streamers from './components/sections/Streamers'
 import Contact from './components/sections/Contact'
-import Footer from './components/layout/Footer'
+
+// UI Components
 import CustomCursor from './components/ui/CustomCursor'
 import ScrollProgress from './components/ui/ScrollProgress'
+import ScrollToTop from './components/ui/ScrollToTop'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <CustomCursor />
-      <ScrollProgress />
-      <Navbar />
-      <Hero />
-      <Features />
-      <Games />
-      <Tournaments />
-      <Streamers />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-900 text-white">
+        <ScrollToTop />
+        <CustomCursor />
+        <ScrollProgress />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/games" element={<Games />} />
+          <Route path="/tournaments" element={<Tournaments />} />
+          <Route path="/streamers" element={<Streamers />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
