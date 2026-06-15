@@ -79,7 +79,7 @@ const MobileMenu = ({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.97, y: 15 }}
         transition={{ type: "spring", damping: 25, stiffness: 220 }}
-        className="relative z-10 w-full max-w-2xl mx-auto min-h-full px-6 pt-8 pb-14 flex flex-col justify-between gap-12 pointer-events-auto"
+        className="relative z-10 w-full max-w-2xl mx-auto min-h-full px-6 pt-8 pb-24 flex flex-col justify-between gap-12 pointer-events-auto"
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -177,7 +177,7 @@ const MobileMenu = ({
         </div>
 
         {/* Footer info & socials */}
-        <div className="flex flex-col gap-4 mt-auto shrink-0 border-t border-white/5 pt-6">
+        <div className="flex flex-col gap-4 mt-auto shrink-0 border-t border-white/5 pt-6 pb-6">
           <div className="flex flex-col items-center gap-4 w-full">
             <span className="text-[10px] text-light/40 font-montserrat tracking-widest uppercase font-extrabold text-center">
               JOIN THE NEXUS COMMUNITY
