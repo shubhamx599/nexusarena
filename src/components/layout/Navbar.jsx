@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 // Hooks
@@ -119,13 +119,17 @@ const Navbar = () => {
       />
 
       {/* Mobile Menu */}
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-        activeLink={activeLink}
-        onNavClick={handleNavClick}
-        navLinks={NAV_LINKS}
-      />
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+            activeLink={activeLink}
+            onNavClick={handleNavClick}
+            navLinks={NAV_LINKS}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };
