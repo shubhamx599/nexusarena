@@ -87,7 +87,7 @@ const MobileMenu = ({
         {/* Top Control Bar */}
         <div className="flex justify-between items-center border-b border-white/5 pb-5 shrink-0">
           <div className="flex flex-col pl-1">
-            <h3 className="text-xl font-bold text-gradient font-orbitron tracking-wider">NEXUS ARENA</h3>
+            <h3 className="text-lg font-bold text-gradient font-orbitron tracking-wider">NEXUS ARENA</h3>
           </div>
 
           <button

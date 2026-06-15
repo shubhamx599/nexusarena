@@ -67,7 +67,7 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
               className="relative group"
             >
-              <h1 className="text-2xl font-bold text-gradient font-orbitron relative z-10">
+              <h1 className="text-xl sm:text-2xl font-bold text-gradient font-orbitron relative z-10">
                 NEXUS ARENA
               </h1>
             </motion.div>
