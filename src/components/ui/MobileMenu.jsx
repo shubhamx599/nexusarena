@@ -11,40 +11,34 @@ const MobileMenu = ({
   onNavClick, 
   navLinks 
 }) => {
-  // Creative description mappings for navigation links
+  // Creative color and border mappings for navigation links
   const linkDetails = {
     '/': { 
-      desc: 'Main lobby & arena dashboard', 
       color: 'primary', 
       colorHex: '#00ff88',
       hoverBorder: 'hover:border-primary/50' 
     },
     '/features': { 
-      desc: 'Powerups, custom specs & perks', 
       color: 'secondary', 
       colorHex: '#00a2ff',
       hoverBorder: 'hover:border-secondary/50' 
     },
     '/games': { 
-      desc: 'Vast catalogue of virtual titles', 
       color: 'accent', 
       colorHex: '#ff0080',
       hoverBorder: 'hover:border-accent/50' 
     },
     '/tournaments': { 
-      desc: 'Brackets, active schedules & rules', 
       color: 'primary', 
       colorHex: '#00ff88',
       hoverBorder: 'hover:border-primary/50' 
     },
     '/streamers': { 
-      desc: 'Top content creators & live channels', 
       color: 'secondary', 
       colorHex: '#00a2ff',
       hoverBorder: 'hover:border-secondary/50' 
     },
     '/contact': { 
-      desc: 'Secure command center hotline', 
       color: 'accent', 
       colorHex: '#ff0080',
       hoverBorder: 'hover:border-accent/50' 
@@ -116,7 +110,6 @@ const MobileMenu = ({
               const Icon = link.icon;
               const isActive = activeLink === link.href;
               const details = linkDetails[link.href] || { 
-                desc: 'Explore link', 
                 color: 'primary', 
                 colorHex: '#00ff88',
                 hoverBorder: 'hover:border-primary/30' 
@@ -143,7 +136,7 @@ const MobileMenu = ({
                       e.stopPropagation();
                       onNavClick();
                     }}
-                    className={`group relative flex flex-col p-5 rounded-2xl border transition-all duration-300 ${
+                    className={`group relative flex items-center gap-4.5 p-4 rounded-2xl border transition-all duration-300 ${
                       isActive 
                         ? `bg-darker/50 shadow-lg ${activeShadow}` 
                         : `bg-white/5 border-white/5 ${details.hoverBorder} hover:bg-white/10`
@@ -151,30 +144,25 @@ const MobileMenu = ({
                   >
                     {/* Glowing Accent Corner Dot */}
                     {isActive && (
-                      <span className="absolute top-5 right-5 flex h-2 w-2">
+                      <span className="absolute top-1/2 right-5 -translate-y-1/2 flex h-2 w-2">
                         <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75`} style={{ backgroundColor: details.colorHex }}></span>
                         <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: details.colorHex }}></span>
                       </span>
                     )}
 
-                    {/* Icon + Title */}
-                    <div className="flex items-center gap-3.5 mb-2.5">
-                      <div className={`p-2.5 rounded-xl transition-all duration-300 ${
-                        isActive 
-                          ? 'bg-darker border border-white/10 text-light' 
-                          : `bg-white/5 text-light/50 group-hover:text-light ${colorText}`
-                      }`}>
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <span className="font-orbitron font-extrabold tracking-wider text-base text-light group-hover:text-primary transition-colors duration-300">
-                        {link.label.toUpperCase()}
-                      </span>
+                    {/* Icon */}
+                    <div className={`p-2.5 rounded-xl transition-all duration-300 ${
+                      isActive 
+                        ? 'bg-darker border border-white/10 text-light' 
+                        : `bg-white/5 text-light/50 group-hover:text-light ${colorText}`
+                    }`}>
+                      <Icon className="w-5 h-5" />
                     </div>
-
-                    {/* Tagline Description */}
-                    <p className="text-xs text-light/40 leading-relaxed font-montserrat transition-colors duration-300 group-hover:text-light/70 pl-0.5">
-                      {details.desc}
-                    </p>
+                    
+                    {/* Title */}
+                    <span className="font-orbitron font-extrabold tracking-wider text-base text-light group-hover:text-primary transition-colors duration-300">
+                      {link.label.toUpperCase()}
+                    </span>
 
                     {/* High-tech Bottom Border Animation */}
                     <div 
