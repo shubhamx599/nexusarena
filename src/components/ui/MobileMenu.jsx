@@ -64,14 +64,7 @@ const MobileMenu = ({
         <div className="absolute top-[35%] left-[25%] w-[35%] h-[35%] rounded-full bg-accent/5 blur-[100px] animate-pulse" style={{ animationDelay: '5s' }}></div>
       </div>
 
-      {/* Screen Frame Grid Pattern Overlay */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-0 opacity-15"
-        style={{
-          backgroundImage: 'radial-gradient(var(--color-primary) 1px, transparent 1px)',
-          backgroundSize: '24px 24px'
-        }}
-      />
+
 
       {/* Dashboard Card Container */}
       <motion.div
