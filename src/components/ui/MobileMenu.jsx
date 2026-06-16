@@ -79,7 +79,7 @@ const MobileMenu = ({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.97, y: 15 }}
         transition={{ type: "spring", damping: 25, stiffness: 220 }}
-        className="relative z-10 w-full max-w-2xl mx-auto min-h-full px-6 pt-8 pb-24 flex flex-col justify-between gap-12 pointer-events-auto"
+        className="relative z-10 w-full max-w-2xl mx-auto min-h-full px-6 pt-8 pb-36 flex flex-col justify-between gap-12 pointer-events-auto"
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -136,7 +136,7 @@ const MobileMenu = ({
                       e.stopPropagation();
                       onNavClick();
                     }}
-                    className={`group relative flex items-center gap-4.5 p-4 rounded-2xl border transition-all duration-300 ${
+                    className={`group relative flex items-center gap-4.5 py-2.5 px-4 rounded-2xl border transition-all duration-300 ${
                       isActive 
                         ? `bg-darker/50 shadow-lg ${activeShadow}` 
                         : `bg-white/5 border-white/5 ${details.hoverBorder} hover:bg-white/10`
@@ -151,7 +151,7 @@ const MobileMenu = ({
                     )}
 
                     {/* Icon */}
-                    <div className={`p-2.5 rounded-xl transition-all duration-300 ${
+                    <div className={`p-2 rounded-xl transition-all duration-300 ${
                       isActive 
                         ? 'bg-darker border border-white/10 text-light' 
                         : `bg-white/5 text-light/50 group-hover:text-light ${colorText}`
@@ -177,7 +177,7 @@ const MobileMenu = ({
         </div>
 
         {/* Footer info & socials */}
-        <div className="flex flex-col gap-4 mt-auto shrink-0 border-t border-white/5 pt-6 pb-6">
+        <div className="flex flex-col gap-4 mt-auto shrink-0 border-t border-white/5 pt-6 pb-12">
           <div className="flex flex-col items-center gap-4 w-full">
             <span className="text-[10px] text-light/40 font-montserrat tracking-widest uppercase font-extrabold text-center">
               JOIN THE NEXUS COMMUNITY
