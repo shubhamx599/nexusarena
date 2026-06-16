@@ -64,22 +64,20 @@ const MobileMenu = ({
         <div className="absolute top-[35%] left-[25%] w-[35%] h-[35%] rounded-full bg-accent/5 blur-[100px] animate-pulse" style={{ animationDelay: '5s' }}></div>
       </div>
 
-
-
       {/* Dashboard Card Container */}
       <motion.div
         initial={{ opacity: 0, scale: 0.97, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.97, y: 15 }}
         transition={{ type: "spring", damping: 25, stiffness: 220 }}
-        className="relative z-10 w-full max-w-2xl mx-auto min-h-full px-6 pt-8 pb-36 flex flex-col justify-between gap-12 pointer-events-auto"
+        className="relative z-10 w-full max-w-2xl mx-auto min-h-full px-6 pt-8 pb-36 flex flex-col justify-between gap-8 pointer-events-auto"
         onClick={(e) => {
           e.stopPropagation();
         }}
       >
         {/* Top Control Bar */}
-        <div className="flex justify-between items-center border-b border-white/5 pb-5 shrink-0">
-          <div className="flex flex-col pl-1">
+        <div className="flex justify-between items-center border-b border-white/5 pb-4 shrink-0">
+          <div className="flex flex-col">
             <h3 className="text-lg font-bold text-gradient font-orbitron tracking-wider">NEXUS ARENA</h3>
           </div>
 
@@ -97,8 +95,8 @@ const MobileMenu = ({
         </div>
 
         {/* Dynamic Navigation Dashboard Grid */}
-        <div className="flex flex-col gap-6 my-auto">
-          <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
+        <div className="flex flex-col gap-4 mt-2 mb-auto">
+          <div className="grid grid-cols-1 xs:grid-cols-2 gap-3">
             {navLinks.map((link, idx) => {
               const Icon = link.icon;
               const isActive = activeLink === link.href;
@@ -129,7 +127,7 @@ const MobileMenu = ({
                       e.stopPropagation();
                       onNavClick();
                     }}
-                    className={`group relative flex items-center gap-4.5 py-2.5 px-4 rounded-2xl border transition-all duration-300 ${
+                    className={`group relative flex items-center gap-4.5 py-2 px-3.5 rounded-xl border transition-all duration-300 ${
                       isActive 
                         ? `bg-darker/50 shadow-lg ${activeShadow}` 
                         : `bg-white/5 border-white/5 ${details.hoverBorder} hover:bg-white/10`
@@ -137,23 +135,23 @@ const MobileMenu = ({
                   >
                     {/* Glowing Accent Corner Dot */}
                     {isActive && (
-                      <span className="absolute top-1/2 right-5 -translate-y-1/2 flex h-2 w-2">
+                      <span className="absolute top-1/2 right-4 -translate-y-1/2 flex h-1.5 w-1.5">
                         <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75`} style={{ backgroundColor: details.colorHex }}></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: details.colorHex }}></span>
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5" style={{ backgroundColor: details.colorHex }}></span>
                       </span>
                     )}
 
                     {/* Icon */}
-                    <div className={`p-2 rounded-xl transition-all duration-300 ${
+                    <div className={`p-1.5 rounded-lg transition-all duration-300 ${
                       isActive 
                         ? 'bg-darker border border-white/10 text-light' 
                         : `bg-white/5 text-light/50 group-hover:text-light ${colorText}`
                     }`}>
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-4.5 h-4.5" />
                     </div>
                     
                     {/* Title */}
-                    <span className="font-orbitron font-extrabold tracking-wider text-base text-light group-hover:text-primary transition-colors duration-300">
+                    <span className="font-orbitron font-bold tracking-wider text-sm text-light group-hover:text-primary transition-colors duration-300">
                       {link.label.toUpperCase()}
                     </span>
 
