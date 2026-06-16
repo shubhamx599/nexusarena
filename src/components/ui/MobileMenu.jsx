@@ -70,7 +70,7 @@ const MobileMenu = ({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.97, y: 15 }}
         transition={{ type: "spring", damping: 25, stiffness: 220 }}
-        className="relative z-10 w-full max-w-2xl mx-auto min-h-full px-6 pt-8 pb-36 flex flex-col justify-between gap-8 pointer-events-auto"
+        className="relative z-10 w-full max-w-lg mx-auto min-h-full px-10 pt-8 pb-36 flex flex-col justify-between gap-8 pointer-events-auto"
         onClick={(e) => {
           e.stopPropagation();
         }}
